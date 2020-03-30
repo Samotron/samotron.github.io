@@ -46,6 +46,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write '**/*.js'",

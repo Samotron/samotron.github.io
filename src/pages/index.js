@@ -68,9 +68,6 @@ const IndexPage = () => {
       });
 
       marker.bindPopup( popup );
-
-      setTimeout(() => marker.openPopup(), timeToOpenPopupAfterZoom );
-      setTimeout(() => marker.setPopupContent( popupContentGatsby ), timeToUpdatePopupAfterZoom );
     }, timeToZoom );
   }
 
@@ -90,15 +87,6 @@ const IndexPage = () => {
       <Map {...mapSettings}>
         <Marker ref={markerRef} position={CENTER} />
       </Map>
-
-      <Container type="content" className="text-center home-start">
-        <h2>Still Getting Started?</h2>
-        <p>Run the following in your terminal!</p>
-        <pre>
-          <code>gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet</code>
-        </pre>
-        <p className="note">Note: Gatsby CLI required globally for the above command</p>
-      </Container>
     </Layout>
   );
 };
